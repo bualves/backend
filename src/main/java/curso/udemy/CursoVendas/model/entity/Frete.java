@@ -61,4 +61,7 @@ public class Frete {
 
     @Column(name = "usuarioLogado")
     private String usuarioLogado;
+
+    @Column(name = "valorFinal")
+    private String valorFinal;
 }
