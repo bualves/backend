@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("/api/frete")
 public class FreteController
 {
-
     private final FreteRepository repository;
 
     @Autowired
