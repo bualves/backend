@@ -24,29 +24,28 @@ public class Motoristas {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nomeMotorista", nullable = false, length = 150)
+    @Column(name = "nomemotorista", nullable = false, length = 150)  // CORRIGIDO
     @NotEmpty(message = "{campo.nomeMotorista.obrigatorio}")
     private String nome;
 
-    @Column(name = "cpfMotorista",nullable = false, length = 11)
+    @Column(name = "cpfmotorista", nullable = false, length = 11)    // CORRIGIDO
     @NotNull(message = "{campo.cpfMotorista.obrigatorio}")
     @CPF(message = "{campo.cpf.invalido}")
     private String cpf;
 
-    @Column(name = "telefoneMotorista", nullable = false)
+    @Column(name = "telefonemotorista", nullable = false)           // CORRIGIDO
     @NotNull(message = "{campo.telefoneMotorista.obrigatorio}")
     private String telefoneMotorista;
 
-    @Column(name = "telefoneSecundarioMotorista")
+    @Column(name = "telefonesecundariomotorista")                   // CORRIGIDO
     private String telefoneSecundarioMotorista;
 
-    @Column(name = "categoriaCNH", nullable = false)
+    @Column(name = "categoriacnh", nullable = false)               // CORRIGIDO
     private String categoriaCNH;
 
-    @Column(name = "numeroCNH", nullable = false)
+    @Column(name = "numerocnh", nullable = false)                  // CORRIGIDO
     private String numeroCNH;
 
-    @Column(name = "usuarioLogado")
+    @Column(name = "usuariologado")                                // CORRIGIDO
     private String usuarioLogado;
-
 }

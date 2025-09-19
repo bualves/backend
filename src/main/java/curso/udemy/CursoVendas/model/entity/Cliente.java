@@ -18,30 +18,28 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Table(name = "cliente")
-public class Cliente
-{
+public class Cliente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nomeCliente", nullable = false, length = 150)
+    @Column(name = "nomecliente", nullable = false, length = 150)  // ← CORRIGIDO
     @NotEmpty(message = "{campo.nome.obrigatorio}")
     private String nome;
 
-    @Column(name = "cpfCliente",nullable = false, length = 11)
+    @Column(name = "cpfcliente", nullable = false, length = 11)    // ← CORRIGIDO
     @NotNull(message = "{campo.cpf.obrigatorio}")
     @CPF(message = "{campo.cpf.invalido}")
     private String cpf;
 
-    @Column(name = "data_cadastroCliente", updatable = false)
+    @Column(name = "data_cadastrocliente", updatable = false)      // ← CORRIGIDO
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
     @PrePersist
-    public void prePersist()
-    {
+    public void prePersist() {
         setDataCadastro(LocalDate.now());
     }
-
 }

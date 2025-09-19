@@ -27,41 +27,41 @@ public class Frete {
     @Column(name = "veiculo")
     private String veiculo;
 
-    @Column(name = "contratanteFrete")
+    @Column(name = "contratantefrete")  // CORRIGIDO
     private String contratanteFrete;
 
-    @Column(name = "cidadeOrigem")
+    @Column(name = "cidadeorigem")      // CORRIGIDO
     private String cidadeOrigem;
 
-    @Column(name = "cidadeDestino")
+    @Column(name = "cidadedestino")     // CORRIGIDO
     private String cidadeDestino;
 
     @Column(name = "estado")
     private String estado;
 
-    @Column(name = "valorTotal")
+    @Column(name = "valortotal")        // CORRIGIDO
     private String valorTotal;
 
-    @Column(name = "valorPago")
+    @Column(name = "valorpago")         // CORRIGIDO
     private String valorPago;
 
-    @Column(name = "statusFrete")
+    @Column(name = "statusfrete")       // CORRIGIDO
     private String statusFrete;
 
-    @Column(name = "statusPagamento")
+    @Column(name = "statuspagamento")   // CORRIGIDO
     private String statusPagamento;
 
-    @Column(name = "dataInicio")
+    @Column(name = "datainicio")        // CORRIGIDO
     @JsonFormat(pattern = "dd/MM/yyyy")
     private String dataInicio;
 
-    @Column(name = "dataFinal")
+    @Column(name = "datafinal")         // CORRIGIDO
     @JsonFormat(pattern = "dd/MM/yyyy")
     private String dataFinal;
 
-    @Column(name = "usuarioLogado")
+    @Column(name = "usuariologado")     // CORRIGIDO
     private String usuarioLogado;
 
-    @Column(name = "valorFinal")
+    @Column(name = "valorfinal")        // CORRIGIDO
     private String valorFinal;
 }

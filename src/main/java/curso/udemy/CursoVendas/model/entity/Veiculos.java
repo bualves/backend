@@ -30,7 +30,7 @@ public class Veiculos {
     @Column(name = "tipo")
     private String tipo;
 
-    @Column(name = "usuarioLogado")
+    @Column(name = "usuariologado")  // CORRIGIDO - era "usuarioLogado"
     private String usuarioLogado;
 
 }

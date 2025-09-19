@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name = "servicoPrestado")
+@Table(name = "servicoprestado")  // CORRIGIDO - nome da tabela em minúsculo
 public class ServicoPrestado {
 
     @Id
@@ -17,17 +17,17 @@ public class ServicoPrestado {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "descricaoServicoPrestado",nullable = false, length = 255)
+    @Column(name = "descricaoservicoprestado", nullable = false, length = 255)  // CORRIGIDO
     private String descricao;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "id_cliente")  // Este está correto
     private Cliente cliente;
 
     @Column(name = "valor")
     private BigDecimal valor;
 
-    @Column
+    @Column(name = "data")  // ADICIONADO - especificar o nome da coluna
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate data;
 }
