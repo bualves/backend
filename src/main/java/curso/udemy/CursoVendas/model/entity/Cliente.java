@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
+import org.hibernate.validator.constraints.br.CNPJ;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -25,16 +25,16 @@ public class Cliente {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nomecliente", nullable = false, length = 150)  // ← CORRIGIDO
+    @Column(name = "nomecliente", nullable = false, length = 150)
     @NotEmpty(message = "{campo.nome.obrigatorio}")
     private String nome;
 
-    @Column(name = "cpfcliente", nullable = false, length = 11)    // ← CORRIGIDO
-    @NotNull(message = "{campo.cpf.obrigatorio}")
-    @CPF(message = "{campo.cpf.invalido}")
-    private String cpf;
+    @Column(name = "cnpjcliente", nullable = false, length = 14)
+    @NotNull(message = "{campo.cnpj.obrigatorio}")
+    @CNPJ(message = "{campo.cnpj.invalido}")
+    private String cnpj;
 
-    @Column(name = "data_cadastrocliente", updatable = false)      // ← CORRIGIDO
+    @Column(name = "data_cadastrocliente", updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
